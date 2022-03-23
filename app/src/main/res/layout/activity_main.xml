@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC1C1"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="296dp"
+        android:layout_marginEnd="179dp"
+        android:fontFamily="@font/pirata_one"
+        android:text="Survial Pack"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBasla"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="159dp"
+        android:background="@drawable/custom_button_basla"
+        android:text="Button"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="161dp"
+        android:layout_height="215dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/buttonInstagram"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="67dp"
+        android:background="@drawable/instagram"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTwitter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBasla" />
+
+    <Button
+        android:id="@+id/buttonTwitter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/twitter"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFacebook"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonInstagram"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBasla" />
+
+    <Button
+        android:id="@+id/buttonFacebook"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/facebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonTwitter"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBasla" />
+</androidx.constraintlayout.widget.ConstraintLayout>
