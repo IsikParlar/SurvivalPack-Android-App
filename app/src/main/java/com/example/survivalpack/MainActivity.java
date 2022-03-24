@@ -1,13 +1,17 @@
 package com.example.survivalpack;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this, R.color.arkaplanrengi));
+
 
         buttonBasla=findViewById(R.id.buttonBasla);
         buttonFacebook=findViewById(R.id.buttonFacebook);
