@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/arkaplanrengi"
-    tools:context=".ActivityAnaEkran">
+    tools:context=".AnaEkranActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginRight="10dp"
                 android:orientation="vertical">
 
@@ -156,7 +156,7 @@
                                 android:layout_below="@+id/backpackilkyardim"
                                 android:layout_centerInParent="true"
                                 android:layout_marginTop="10dp"
-                                android:text="İlkyardım Çantası"
+                                android:text="İlk Yardım Çantası"
                                 android:textColor="#000"
                                 android:textSize="16sp"
                                 android:textStyle="bold"></TextView>

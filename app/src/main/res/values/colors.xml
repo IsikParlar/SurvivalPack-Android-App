@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="arkaplanrengi">#FFC1C1</color>
     <color name="headerrengi">#FF4CAF50</color>
+    <color name="bottomnavcolor">#CD5D5D</color>
 </resources>

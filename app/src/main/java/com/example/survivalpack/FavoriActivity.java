@@ -25,7 +25,7 @@ public class FavoriActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.anasayfa:
-                        startActivity(new Intent(getApplicationContext(),ActivityAnaEkran.class));
+                        startActivity(new Intent(getApplicationContext(), AnaEkranActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.cantam:

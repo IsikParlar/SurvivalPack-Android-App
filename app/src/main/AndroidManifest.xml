@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SurvivalPack">
         <activity
+            android:name=".KampCantasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DagciCantasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CocukCantasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IlkYardimCantasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DepremCantasiActivity"
+            android:exported="false" />
+        <activity
             android:name=".CantamActivity"
             android:exported="false" />
         <activity
@@ -24,7 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityAnaEkran" />
+        <activity android:name=".AnaEkranActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
