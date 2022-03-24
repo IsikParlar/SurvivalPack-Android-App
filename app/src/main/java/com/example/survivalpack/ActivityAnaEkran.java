@@ -11,6 +11,6 @@ public class ActivityAnaEkran extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anaekran);
-        getWindow().setStatusBarColor(ContextCompat.getColor(ActivityAnaEkran.this,R.color.white));
+        getWindow().setStatusBarColor(ContextCompat.getColor(ActivityAnaEkran.this,R.color.arkaplanrengi));
     }
 }
