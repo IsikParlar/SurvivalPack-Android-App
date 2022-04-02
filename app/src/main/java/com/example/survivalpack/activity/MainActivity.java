@@ -1,4 +1,4 @@
-package com.example.survivalpack;
+package com.example.survivalpack.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -8,6 +8,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.survivalpack.R;
 
 public class MainActivity extends AppCompatActivity {
 

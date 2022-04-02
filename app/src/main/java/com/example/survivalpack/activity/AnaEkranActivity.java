@@ -1,4 +1,4 @@
-package com.example.survivalpack;
+package com.example.survivalpack.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.example.survivalpack.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AnaEkranActivity extends AppCompatActivity {
@@ -33,6 +34,8 @@ public class AnaEkranActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AnaEkranActivity.this,"Özel Çantaya Tıklanıldı", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AnaEkranActivity.this,OzelCantaActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -40,6 +43,8 @@ public class AnaEkranActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AnaEkranActivity.this,"Çocuk Çantasına Tıklanıldı", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AnaEkranActivity.this,CocukCantasiActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -47,6 +52,8 @@ public class AnaEkranActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AnaEkranActivity.this,"Kamp Çantasına Tıklanıldı", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AnaEkranActivity.this,KampCantasiActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -54,6 +61,8 @@ public class AnaEkranActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AnaEkranActivity.this,"Dağcı Çantasına Tıklanıldı", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AnaEkranActivity.this,DagciCantasiActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -61,6 +70,8 @@ public class AnaEkranActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AnaEkranActivity.this,"İlk Yardım Çantasına Tıklanıldı", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AnaEkranActivity.this,IlkYardimCantasiActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -68,6 +79,8 @@ public class AnaEkranActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AnaEkranActivity.this,"Deprem Çantasına Tıklanıldı", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AnaEkranActivity.this,DepremCantasiActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -82,11 +95,11 @@ public class AnaEkranActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.cantam:
-                        startActivity(new Intent(getApplicationContext(),CantamActivity.class));
+                        startActivity(new Intent(getApplicationContext(), CantamActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.favorite:
-                        startActivity(new Intent(getApplicationContext(),FavoriActivity.class));
+                        startActivity(new Intent(getApplicationContext(), FavoriActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 

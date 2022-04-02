@@ -4,34 +4,34 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/survivalpackicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/survivalpackicon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SurvivalPack">
         <activity
-            android:name=".KampCantasiActivity"
+            android:name=".activity.KampCantasiActivity"
             android:exported="false" />
         <activity
-            android:name=".DagciCantasiActivity"
+            android:name=".activity.DagciCantasiActivity"
             android:exported="false" />
         <activity
-            android:name=".CocukCantasiActivity"
+            android:name=".activity.CocukCantasiActivity"
             android:exported="false" />
         <activity
-            android:name=".IlkYardimCantasiActivity"
+            android:name=".activity.IlkYardimCantasiActivity"
             android:exported="false" />
         <activity
-            android:name=".DepremCantasiActivity"
+            android:name=".activity.DepremCantasiActivity"
             android:exported="false" />
         <activity
-            android:name=".CantamActivity"
+            android:name=".activity.CantamActivity"
             android:exported="false" />
         <activity
-            android:name=".FavoriActivity"
+            android:name=".activity.FavoriActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AnaEkranActivity" />
+        <activity android:name=".activity.AnaEkranActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

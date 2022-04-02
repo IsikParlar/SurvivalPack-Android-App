@@ -1,4 +1,4 @@
-package com.example.survivalpack;
+package com.example.survivalpack.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.survivalpack.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class FavoriActivity extends AppCompatActivity {
@@ -29,7 +30,7 @@ public class FavoriActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.cantam:
-                        startActivity(new Intent(getApplicationContext(),CantamActivity.class));
+                        startActivity(new Intent(getApplicationContext(), CantamActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.favorite:
@@ -39,5 +40,11 @@ public class FavoriActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(FavoriActivity.this,AnaEkranActivity.class));
     }
 }

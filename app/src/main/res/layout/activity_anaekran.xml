@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/arkaplanrengi"
-    tools:context=".AnaEkranActivity">
+    tools:context=".activity.AnaEkranActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -57,6 +57,8 @@
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_centerInParent="false"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
                                 android:src="@drawable/backpack"></ImageView>
 
                             <TextView
@@ -64,8 +66,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/backpackdeprem"
-                                android:layout_centerInParent="true"
+                                android:layout_centerInParent="false"
                                 android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
                                 android:text="Deprem Çantası"
                                 android:textColor="#000"
                                 android:textSize="16sp"
@@ -97,7 +100,9 @@
                                 android:id="@+id/backpackx"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:layout_centerInParent="true"
+                                android:layout_centerInParent="false"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
                                 android:src="@drawable/backpackx"></ImageView>
 
                             <TextView
@@ -146,7 +151,9 @@
                                 android:id="@+id/backpackilkyardim"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:layout_centerInParent="true"
+                                android:layout_centerInParent="false"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
                                 android:src="@drawable/firstaid"></ImageView>
 
                             <TextView
@@ -187,7 +194,9 @@
                                 android:id="@+id/backpackcocuk"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:layout_centerInParent="true"
+                                android:layout_centerInParent="false"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
                                 android:src="@drawable/school_bag"></ImageView>
 
                             <TextView
@@ -236,7 +245,9 @@
                                 android:id="@+id/backpackkamp"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:layout_centerInParent="true"
+                                android:layout_centerInParent="false"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
                                 android:src="@drawable/bag"></ImageView>
 
                             <TextView
@@ -277,7 +288,9 @@
                                 android:id="@+id/backpackozel"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:layout_centerInParent="true"
+                                android:layout_centerInParent="false"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
                                 android:src="@drawable/backpackx"></ImageView>
 
                             <TextView
