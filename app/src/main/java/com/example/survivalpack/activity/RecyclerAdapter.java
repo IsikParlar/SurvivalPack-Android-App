@@ -1,5 +1,4 @@
 package com.example.survivalpack.activity;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,17 +6,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.survivalpack.R;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
+    // Adapter bir veri kaynağıyla, veriye ihtiyacı olan nesneyi birbirine bağlamaya yarayan yapılardır.
+    // Çantaların içinde ürünlerin listelenmesini adapter sayesinde yapacağız.
+
     String data[];
     Context context;
-
     public RecyclerAdapter(Context context, String[] data) {
         this.data = data;
         this.context = context;
@@ -42,7 +41,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 Toast.makeText(context,"Tıklanıldı " + data[position],Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     @Override

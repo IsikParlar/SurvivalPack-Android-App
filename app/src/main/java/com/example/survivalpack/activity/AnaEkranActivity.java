@@ -1,28 +1,29 @@
 package com.example.survivalpack.activity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
 import com.example.survivalpack.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AnaEkranActivity extends AppCompatActivity {
 
+    //tasarımda kullanacağımız öğeleri tanımlıyoruz
     public Button btnbackpackdeprem, btnbackpackx, btnbackpackilkyardim, btnbackpackcocuk,btnbackpackkamp,btnbackpackozel;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anaekran);
+
+        //statüs barın rengini değiştir
         getWindow().setStatusBarColor(ContextCompat.getColor(AnaEkranActivity.this,R.color.arkaplanrengi));
 
+        //tanımlanan öğeleri bağlıyoruz
         btnbackpackcocuk = findViewById(R.id.btnbackpackcocuk);
         btnbackpackx = findViewById(R.id.btnbackpackx);
         btnbackpackdeprem = findViewById(R.id.btnbackpackdeprem);
@@ -30,6 +31,8 @@ public class AnaEkranActivity extends AppCompatActivity {
         btnbackpackkamp = findViewById(R.id.btnbackpackkamp);
         btnbackpackozel = findViewById(R.id.btnbackpackozel);
 
+        //Tıklanılma özelliğini veriyoruz ve bulunulan sayfadan yeni sayfaya geçişi sağlıyoruz.
+        //Geçiş sağlanırken kullanıcıya toast mesaj gönderiliyor.
         btnbackpackozel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
