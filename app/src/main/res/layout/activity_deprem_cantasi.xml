@@ -10,6 +10,7 @@
     android:background="@color/arkaplanrengi">
 
     <TextView
+        android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Deprem Çantası Sayfası"
@@ -19,10 +20,124 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <Button
+        android:id="@+id/buttonAspirin"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recyclerview"
-        android:layout_marginTop="10dp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Aspirin" />
+
+    <Button
+        android:id="@+id/buttonAtesDusurucu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Ateş Düşürücü" />
+
+    <Button
+        android:id="@+id/buttonBandaj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Bandaj" />
+
+    <Button
+        android:id="@+id/buttonCakmak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Çakmak" />
+
+    <Button
+        android:id="@+id/buttonDuduk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Duduk" />
+
+    <Button
+        android:id="@+id/buttonElFeneri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="El Feneri" />
+
+    <Button
+        android:id="@+id/buttonKagit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Kağıt" />
+
+    <Button
+        android:id="@+id/buttonKalem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Kalem" />
+
+    <Button
+        android:id="@+id/buttonKiyafet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Kıyafet" />
+
+    <Button
+        android:id="@+id/buttonKibrit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Kibrit" />
+
+    <Button
+        android:id="@+id/buttonMaske"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Maske" />
+
+    <Button
+        android:id="@+id/buttonPil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Pil" />
+
+    <Button
+        android:id="@+id/buttonPetSu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Pet Su" />
+
+    <Button
+        android:id="@+id/buttonPowerBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Powerbank" />
+
+    <Button
+        android:id="@+id/buttonRadyo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Radyo" />
 
 </LinearLayout>

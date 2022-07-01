@@ -4,17 +4,24 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import com.example.survivalpack.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AnaEkranActivity extends AppCompatActivity {
 
     //tasarımda kullanacağımız öğeleri tanımlıyoruz
     public Button btnbackpackdeprem, btnbackpackx, btnbackpackilkyardim, btnbackpackcocuk,btnbackpackkamp,btnbackpackozel;
+
+    private ListView listView;
+    private FirebaseDatabase database;
+    private DatabaseReference myRef;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -30,6 +37,11 @@ public class AnaEkranActivity extends AppCompatActivity {
         btnbackpackilkyardim = findViewById(R.id.btnbackpackilkyardim);
         btnbackpackkamp = findViewById(R.id.btnbackpackkamp);
         btnbackpackozel = findViewById(R.id.btnbackpackozel);
+
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("Urunler");
+
+        listView = (ListView) findViewById(com.google.android.material.R.id.layout);
 
         //Tıklanılma özelliğini veriyoruz ve bulunulan sayfadan yeni sayfaya geçişi sağlıyoruz.
         //Geçiş sağlanırken kullanıcıya toast mesaj gönderiliyor.

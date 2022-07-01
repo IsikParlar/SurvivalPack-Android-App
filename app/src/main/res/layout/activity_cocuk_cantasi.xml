@@ -10,19 +10,56 @@
     android:background="@color/arkaplanrengi">
 
     <TextView
+        android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:text="Çocuk Çantası Sayfası"
+        android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
 
-    <androidx.recyclerview.widget.RecyclerView
+        />
+
+    <Button
+        android:id="@+id/buttonBebekBezi"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recyclerview"
-        android:layout_marginTop="10dp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Bebek Bezi" />
+
+    <Button
+        android:id="@+id/buttonBebekMamasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Bebek Maması" />
+
+    <Button
+        android:id="@+id/buttonEmzik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Emzik" />
+
+    <Button
+        android:id="@+id/buttonBiberon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Biberon" />
+
+    <Button
+        android:id="@+id/buttonIslakMendil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_tasarim"
+        android:text="Islak Mendil" />
 
 </LinearLayout>

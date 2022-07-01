@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonBasla, buttonFacebook, buttonInstagram, buttonTwitter;
     //İnternet kontrolü sonrası uygulamaya geçişte 3 saniyelik bekleme süresi
     private static int beklemeSuresi = 3000;
-    private RecyclerAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
