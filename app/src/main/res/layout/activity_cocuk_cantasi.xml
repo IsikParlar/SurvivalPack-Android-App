@@ -27,7 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="Bebek Bezi" />
 
     <Button
@@ -35,7 +34,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="Bebek Maması" />
 
     <Button
@@ -43,7 +41,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="Emzik" />
 
     <Button
@@ -51,7 +48,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="Biberon" />
 
     <Button
@@ -59,7 +55,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="Islak Mendil" />
 
 </LinearLayout>

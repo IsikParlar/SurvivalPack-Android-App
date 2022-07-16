@@ -3,7 +3,8 @@
     package="com.example.survivalpack">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/survivalpackicon"
@@ -11,6 +12,12 @@
         android:roundIcon="@mipmap/survivalpackicon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SurvivalPack">
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.KampCantasiActivity"
             android:exported="false" />
@@ -33,90 +40,7 @@
             android:name=".activity.FavoriActivity"
             android:exported="false" />
         <activity
-            android:name=".urunactivity.BebekMamasi"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Biberon"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Emzik"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.IslakMendil"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.AgriKesici"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Aspirin"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.AtesDusurucu"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Bandaj"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Cakmak"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.CokAmacliCaki"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Dezenfektan"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.GazliBez"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Harita"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Ilac"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.IsaretFisegi"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Kagit"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Kalem"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Kibrit"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Kiyafet"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Maske"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Petsu"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Pil"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Powerbank"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Pusula"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Radyo"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.Tenturdiyot"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.TermalOrtu"
-            android:exported="false" />
-        <activity
-            android:name=".urunactivity.YaraBandi"
-            android:exported="false" />
-
+            android:name=".activity.AnaEkranActivity" />
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">
@@ -126,7 +50,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.AnaEkranActivity" />
+
 
         <meta-data
             android:name="preloaded_fonts"

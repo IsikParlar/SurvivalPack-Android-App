@@ -25,7 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="Çakmak" />
 
     <Button
@@ -33,7 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="Çok Amaçlı Çakı" />
 
     <Button
@@ -41,7 +39,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="El Feneri" />
 
     <Button
@@ -49,7 +46,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="Kıyafet" />
 
     <Button
@@ -57,7 +53,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="Pet Su" />
 
     <Button
@@ -65,7 +60,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="Pusula" />
 
     <Button
@@ -73,7 +67,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/button_tasarim"
         android:text="Termal Örtü" />
 
 </LinearLayout>

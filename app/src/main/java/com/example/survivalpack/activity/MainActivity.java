@@ -11,12 +11,18 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import com.example.survivalpack.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
+    FirebaseAuth mAuth;
     Context context;
     private Button buttonBasla, buttonFacebook, buttonInstagram, buttonTwitter;
+    private TextView tvRegisterHere;
     //İnternet kontrolü sonrası uygulamaya geçişte 3 saniyelik bekleme süresi
     private static int beklemeSuresi = 3000;
 
@@ -27,17 +33,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this, R.color.arkaplanrengi));
 
+        mAuth = FirebaseAuth.getInstance();
 
         buttonBasla=findViewById(R.id.buttonBasla);
         buttonFacebook=findViewById(R.id.buttonFacebook);
         buttonTwitter=findViewById(R.id.buttonTwitter);
         buttonInstagram=findViewById(R.id.buttonInstagram);
+        tvRegisterHere=findViewById(R.id.tvRegisterHere);
+
+        tvRegisterHere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,RegisterActivity.class));
+            }
+        });
 
         //Başla butonuna tıklanıldığında kullanıcı uygulamanın anasayfasına yönlendirilir
         buttonBasla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AnaEkranActivity.class);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -101,5 +116,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 }
 
