@@ -11,13 +11,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import com.example.survivalpack.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class AnaEkranActivity extends AppCompatActivity {
 
     //tasarımda kullanacağımız öğeleri tanımlıyoruz
-    public Button btnbackpackdeprem, btnbackpackx, btnbackpackilkyardim, btnbackpackcocuk,btnbackpackkamp,btnbackpackozel;
+    public Button btnbackpackdeprem, btnbackpackx, btnbackpackilkyardim, btnbackpackcocuk,btnbackpackkamp,btnbackpackozel,buttonSignOut;
 
     private ListView listView;
     private FirebaseDatabase database;
@@ -37,6 +39,7 @@ public class AnaEkranActivity extends AppCompatActivity {
         btnbackpackilkyardim = findViewById(R.id.btnbackpackilkyardim);
         btnbackpackkamp = findViewById(R.id.btnbackpackkamp);
         btnbackpackozel = findViewById(R.id.btnbackpackozel);
+        buttonSignOut = findViewById(R.id.buttonSignOut);
 
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Urunler");
@@ -99,9 +102,41 @@ public class AnaEkranActivity extends AppCompatActivity {
             }
         });
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        buttonSignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(AnaEkranActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.anasayfa);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+       /* bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.anasayfa:
+                        startActivity(new Intent(getApplicationContext(), AnaEkranActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.cantam:
+                        startActivity(new Intent(getApplicationContext(), CantamActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.favorite:
+                        startActivity(new Intent(getApplicationContext(), FavoriActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+                return false;
+            }
+        });*/
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){

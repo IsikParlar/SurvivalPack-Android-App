@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -59,13 +60,30 @@ public class RegisterActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(RegisterActivity.this, "User registered successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-                    } else {
+                        User user = new User(email);
+                        FirebaseDatabase.getInstance().getReference("Users")
+                                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                                .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()){
+                                            Toast.makeText(RegisterActivity.this, "User registered successfully", Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                                        }
+                                        else {
+                                            Toast.makeText(RegisterActivity.this, "Registration Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+
+
+                    }
+                    else {
                         Toast.makeText(RegisterActivity.this, "Registration Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         }
     }
+
 }

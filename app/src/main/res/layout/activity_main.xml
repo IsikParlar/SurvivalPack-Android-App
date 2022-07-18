@@ -23,7 +23,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/tvRegisterHere"
+            android:id="@+id/tvForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -34,7 +34,7 @@
 
     </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonInstagram"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -45,7 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonBasla" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonTwitter"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -56,7 +56,7 @@
         app:layout_constraintStart_toEndOf="@+id/buttonInstagram"
         app:layout_constraintTop_toBottomOf="@+id/buttonBasla" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonFacebook"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -83,7 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonBasla"
         android:layout_width="300dp"
         android:layout_height="60dp"

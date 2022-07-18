@@ -9,8 +9,6 @@ import com.example.survivalpack.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class FavoriActivity extends AppCompatActivity {
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +31,6 @@ public class FavoriActivity extends AppCompatActivity {
                         return true;
                     case R.id.favorite:
                         return true;
-
                 }
                 return false;
             }

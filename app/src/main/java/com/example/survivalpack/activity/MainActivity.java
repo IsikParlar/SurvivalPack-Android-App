@@ -15,7 +15,6 @@ import android.widget.TextView;
 
 import com.example.survivalpack.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         buttonFacebook=findViewById(R.id.buttonFacebook);
         buttonTwitter=findViewById(R.id.buttonTwitter);
         buttonInstagram=findViewById(R.id.buttonInstagram);
-        tvRegisterHere=findViewById(R.id.tvRegisterHere);
+        tvRegisterHere=findViewById(R.id.tvForgotPassword);
 
         tvRegisterHere.setOnClickListener(new View.OnClickListener() {
             @Override

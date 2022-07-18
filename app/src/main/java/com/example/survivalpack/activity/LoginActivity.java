@@ -17,11 +17,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
     TextInputEditText etLoginEmail;
     TextInputEditText etLoginPassword;
-    TextView tvRegisterHere;
+    TextView tvRegisterHere, tvForgotPassword;
     Button btnLogin;
     FirebaseAuth mAuth;
     SharedPreferences preferences;
@@ -36,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
 
         etLoginEmail = findViewById(R.id.etLoginEmail);
         etLoginPassword = findViewById(R.id.etLoginPass);
-        tvRegisterHere = findViewById(R.id.tvRegisterHere);
+        tvRegisterHere = findViewById(R.id.tvForgotPassword);
         btnLogin = findViewById(R.id.btnLogin);
 
         mAuth = FirebaseAuth.getInstance();
@@ -61,10 +62,19 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
-                        bypassLogin();
-                        Toast.makeText(LoginActivity.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(LoginActivity.this, AnaEkranActivity.class));
-                        finish();
+                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                        if (user.isEmailVerified()){
+                            //bypassLogin();
+                            Toast.makeText(LoginActivity.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LoginActivity.this, AnaEkranActivity.class));
+                            finish();
+                        }
+                        else {
+                            user.sendEmailVerification();
+                            Toast.makeText(LoginActivity.this, "Check your email to verify your account!",Toast.LENGTH_SHORT).show();
+                        }
+
                     }else{
                         Toast.makeText(LoginActivity.this, "Log in Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
@@ -73,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /*
     private void bypassLogin(){
         if (preferences.getString("saved_Mail","false").equals("true")){
             Intent intent = new Intent(LoginActivity.this,AnaEkranActivity.class);
@@ -86,5 +97,6 @@ public class LoginActivity extends AppCompatActivity {
             editor.commit();
         }
     }
+    */
 
 }
