@@ -52,7 +52,7 @@ public class AnaEkranActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AnaEkranActivity.this,"Özel Çantaya Tıklanıldı", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AnaEkranActivity.this,OzelCantaActivity.class);
+                Intent intent = new Intent(AnaEkranActivity.this,UrunList.class);
                 startActivity(intent);
             }
         });

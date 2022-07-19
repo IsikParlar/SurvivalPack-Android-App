@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
                         else {
                             user.sendEmailVerification();
-                            Toast.makeText(LoginActivity.this, "Check your email to verify your account!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Check your email to verify your account! Don't forget to look spam folder!",Toast.LENGTH_SHORT).show();
                         }
 
                     }else{

@@ -101,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewUrunFoto"
         android:layout_width="161dp"
         android:layout_height="215dp"
         android:layout_marginStart="83dp"

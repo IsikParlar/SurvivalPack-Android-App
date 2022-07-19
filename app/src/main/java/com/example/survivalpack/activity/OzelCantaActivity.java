@@ -17,5 +17,6 @@ public class OzelCantaActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(OzelCantaActivity.this, R.color.arkaplanrengi));
 
 
+
     }
 }
