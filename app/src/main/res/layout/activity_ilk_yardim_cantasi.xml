@@ -20,68 +20,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
 
-    <Button
-        android:id="@+id/buttonAgriKesici"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Ağrı Kesici" />
 
-    <Button
-        android:id="@+id/buttonAspirin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Aspirin" />
-
-    <Button
-        android:id="@+id/buttonBandaj"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Bandaj" />
-
-    <Button
-        android:id="@+id/buttonDezenfektan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Dezenfektan" />
-
-    <Button
-        android:id="@+id/buttonGazliBez"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Gazlı Bez" />
-
-    <Button
-        android:id="@+id/buttonIslakMendil"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Islak Mendil" />
-
-    <Button
-        android:id="@+id/buttonIlac"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="İlaç" />
-
-    <Button
-        android:id="@+id/buttonTenturdiyot"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Tentürdiyot" />
-
-    <Button
-        android:id="@+id/buttonYaraBandi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-
-        android:text="Yara Bandı" />
 
 </LinearLayout>

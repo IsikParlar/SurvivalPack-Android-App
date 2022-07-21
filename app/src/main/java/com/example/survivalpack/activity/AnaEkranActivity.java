@@ -24,11 +24,11 @@ public class AnaEkranActivity extends AppCompatActivity {
     private ListView listView;
     private FirebaseDatabase database;
     private DatabaseReference myRef;
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anaekran);
-
         //statüs barın rengini değiştir
         getWindow().setStatusBarColor(ContextCompat.getColor(AnaEkranActivity.this,R.color.arkaplanrengi));
 
@@ -43,8 +43,10 @@ public class AnaEkranActivity extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Urunler");
+        mAuth = FirebaseAuth.getInstance();
 
         listView = (ListView) findViewById(com.google.android.material.R.id.layout);
+
 
         //Tıklanılma özelliğini veriyoruz ve bulunulan sayfadan yeni sayfaya geçişi sağlıyoruz.
         //Geçiş sağlanırken kullanıcıya toast mesaj gönderiliyor.
@@ -52,7 +54,7 @@ public class AnaEkranActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AnaEkranActivity.this,"Özel Çantaya Tıklanıldı", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AnaEkranActivity.this,UrunList.class);
+                Intent intent = new Intent(AnaEkranActivity.this,OzelCantaActivity.class);
                 startActivity(intent);
             }
         });
@@ -88,7 +90,7 @@ public class AnaEkranActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AnaEkranActivity.this,"İlk Yardım Çantasına Tıklanıldı", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AnaEkranActivity.this,IlkYardimCantasiActivity.class);
+                Intent intent = new Intent(AnaEkranActivity.this, IlkYardimCantasiActivity.class);
                 startActivity(intent);
             }
         });
@@ -105,11 +107,14 @@ public class AnaEkranActivity extends AppCompatActivity {
         buttonSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
+
+                FirebaseAuth.getInstance().getCurrentUser();
                 Intent intent = new Intent(AnaEkranActivity.this,LoginActivity.class);
                 startActivity(intent);
+
             }
         });
+
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.anasayfa);
@@ -136,6 +141,7 @@ public class AnaEkranActivity extends AppCompatActivity {
             }
         });*/
 
+
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -157,5 +163,8 @@ public class AnaEkranActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+
     }
+
 }

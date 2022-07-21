@@ -20,53 +20,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
 
-    <Button
-        android:id="@+id/buttonCakmak"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Çakmak" />
 
-    <Button
-        android:id="@+id/buttonCokAmacliCaki"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Çok Amaçlı Çakı" />
-
-    <Button
-        android:id="@+id/buttonElFeneri"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="El Feneri" />
-
-    <Button
-        android:id="@+id/buttonKiyafet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Kıyafet" />
-
-    <Button
-        android:id="@+id/buttonPetSu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Pet Su" />
-
-    <Button
-        android:id="@+id/buttonPusula"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Pusula" />
-
-    <Button
-        android:id="@+id/buttonTermalOrtu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Termal Örtü" />
 
 </LinearLayout>

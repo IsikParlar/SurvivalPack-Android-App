@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.survivalpack.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Başla butonuna tıklanıldığında kullanıcı uygulamanın anasayfasına yönlendirilir
+
         buttonBasla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,9 +115,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
         }
-
     }
-
 
 }
 

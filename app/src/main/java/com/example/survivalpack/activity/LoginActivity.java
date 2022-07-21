@@ -2,6 +2,7 @@ package com.example.survivalpack.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -32,6 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getWindow().setStatusBarColor(ContextCompat.getColor(LoginActivity.this,R.color.arkaplanrengi));
+
         preferences = this.getSharedPreferences("MyPreference",MODE_PRIVATE);
         editor = preferences.edit();
 
@@ -72,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
                         else {
                             user.sendEmailVerification();
-                            Toast.makeText(LoginActivity.this, "Check your email to verify your account! Don't forget to look spam folder!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Check your email to verify your account! Don't forget to look spam folder!",Toast.LENGTH_LONG).show();
                         }
 
                     }else{

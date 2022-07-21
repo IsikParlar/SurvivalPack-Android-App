@@ -2,6 +2,7 @@ package com.example.survivalpack.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        getWindow().setStatusBarColor(ContextCompat.getColor(RegisterActivity.this,R.color.arkaplanrengi));
 
         etRegEmail = findViewById(R.id.etRegEmail);
         etRegPass = findViewById(R.id.etRegPass);
@@ -67,11 +69,11 @@ public class RegisterActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()){
-                                            Toast.makeText(RegisterActivity.this, "User registered successfully", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RegisterActivity.this, "User registered successfully. After login attempt, verification mail will be sent!", Toast.LENGTH_SHORT).show();
                                             startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                                         }
                                         else {
-                                            Toast.makeText(RegisterActivity.this, "Registration Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RegisterActivity.this, "Registration Error: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                                         }
                                     }
                                 });
