@@ -47,5 +47,8 @@ dependencies {
     //Firebase
     implementation 'com.google.firebase:firebase-database:20.0.5'
 
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.8'
+
 
 }

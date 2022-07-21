@@ -12,6 +12,8 @@
         android:roundIcon="@mipmap/survivalpackicon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SurvivalPack">
+        <activity android:name=".activity.OzelCantaActivity"
+            android:exported="false"/>
         <activity
             android:name=".activity.LoginActivity"
             android:exported="false" />

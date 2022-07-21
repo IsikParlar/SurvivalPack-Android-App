@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
+import android.util.Log;
+
 import com.example.survivalpack.R;
 import com.example.survivalpack.activity.Urun;
 import com.example.survivalpack.activity.UrunAdapter;
@@ -42,6 +44,7 @@ public class IlkYardimCantasiActivity extends AppCompatActivity {
 
                     Urun urun = dataSnapshot.getValue(Urun.class);
                     list.add(urun);
+                    Log.d("Deneme", String.valueOf(snapshot.getValue()));
                 }
                 urunAdapter.notifyDataSetChanged();
             }

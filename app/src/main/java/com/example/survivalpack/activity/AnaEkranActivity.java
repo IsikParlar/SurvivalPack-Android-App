@@ -1,4 +1,5 @@
 package com.example.survivalpack.activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -7,6 +8,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import com.example.survivalpack.R;
@@ -25,6 +27,7 @@ public class AnaEkranActivity extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference myRef;
     FirebaseAuth mAuth;
+    AlertDialog.Builder builder;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -44,6 +47,7 @@ public class AnaEkranActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Urunler");
         mAuth = FirebaseAuth.getInstance();
+        builder = new AlertDialog.Builder(this);
 
         listView = (ListView) findViewById(com.google.android.material.R.id.layout);
 
@@ -104,13 +108,32 @@ public class AnaEkranActivity extends AppCompatActivity {
             }
         });
 
+
         buttonSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                FirebaseAuth.getInstance().getCurrentUser();
+                /*FirebaseAuth.getInstance().getCurrentUser();
                 Intent intent = new Intent(AnaEkranActivity.this,LoginActivity.class);
-                startActivity(intent);
+                startActivity(intent);*/
+                builder.setTitle("Do You Really Want To Logout?")
+                        .setCancelable(true)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                FirebaseAuth.getInstance().getCurrentUser();
+                                FirebaseAuth.getInstance().signOut();
+                                Intent intent = new Intent(AnaEkranActivity.this,LoginActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        }).show();
 
             }
         });
@@ -167,4 +190,24 @@ public class AnaEkranActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed(){
+        builder.setTitle("Do You Really Want To Logout?")
+                .setCancelable(true)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        FirebaseAuth.getInstance().getCurrentUser();
+                        Intent intent = new Intent(AnaEkranActivity.this,LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                }).show();
+    }
 }

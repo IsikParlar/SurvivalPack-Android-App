@@ -1,5 +1,7 @@
 package com.example.survivalpack.activity;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import android.content.Context;
@@ -9,9 +11,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.survivalpack.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     Context context;
     private Button buttonBasla, buttonFacebook, buttonInstagram, buttonTwitter;
     private TextView tvRegisterHere;
+    private long backPressedTime;
+    private Toast backToast;
     //İnternet kontrolü sonrası uygulamaya geçişte 3 saniyelik bekleme süresi
     private static int beklemeSuresi = 3000;
 
@@ -34,7 +40,12 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this, R.color.arkaplanrengi));
 
         mAuth = FirebaseAuth.getInstance();
+        mAuth.getCurrentUser();
 
+        if (mAuth.getCurrentUser()!=null){
+            Intent intent = new Intent(MainActivity.this,AnaEkranActivity.class);
+            startActivity(intent);
+        }
         buttonBasla=findViewById(R.id.buttonBasla);
         buttonFacebook=findViewById(R.id.buttonFacebook);
         buttonTwitter=findViewById(R.id.buttonTwitter);
@@ -117,5 +128,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            backToast.cancel();
+            super.onBackPressed();
+            return;
+        } else {
+            backToast = Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT);
+            backToast.show();
+        }
+
+        backPressedTime = System.currentTimeMillis();
+    }
 }
+
 
