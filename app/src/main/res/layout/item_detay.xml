@@ -7,7 +7,7 @@
     android:background="@color/arkaplanrengi">
 
     <TextView
-        android:id="@+id/textViewUrunDetayBaslik"
+        android:id="@+id/tvUrunDetayBaslik"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -29,18 +29,19 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textViewUrunDetayAciklama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/tvUrunDetayAciklama"
+        android:layout_width="226dp"
+        android:layout_height="171dp"
         android:layout_marginTop="50dp"
         android:text="Açıklama"
+        android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewUrunDetay" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSepeteEkle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="95dp"

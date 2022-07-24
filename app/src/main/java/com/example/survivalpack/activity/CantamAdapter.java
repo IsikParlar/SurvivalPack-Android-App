@@ -1,5 +1,4 @@
 package com.example.survivalpack.activity;
-
 import com.example.survivalpack.R;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,12 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
-public class UrunAdapter extends RecyclerView.Adapter<UrunAdapter.MyViewHolder> {
+public class CantamAdapter extends RecyclerView.Adapter<CantamAdapter.MyViewHolder> {
 
     Context context;
-    ArrayList<Urun> list;
+    ArrayList<CantamModel> list;
 
-    public UrunAdapter(Context context, ArrayList<Urun> list) {
+    public CantamAdapter(Context context, ArrayList<CantamModel> list) {
         this.context = context;
         this.list = list;
     }
@@ -28,10 +27,11 @@ public class UrunAdapter extends RecyclerView.Adapter<UrunAdapter.MyViewHolder> 
         return new MyViewHolder(v);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Urun urun = list.get(position);
-        holder.urunAdi.setText(urun.getUrunAdi());
+        CantamModel cantamModel = list.get(position);
+        holder.cantamAdi.setText(cantamModel.getCantam_ad());
         //holder.urunUrl.setText(urun.getUrunUrl());
     }
 
@@ -44,12 +44,13 @@ public class UrunAdapter extends RecyclerView.Adapter<UrunAdapter.MyViewHolder> 
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView urunAdi, urunUrl;
+        TextView cantamAdi;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            urunAdi = itemView.findViewById(R.id.textViewCantamAdi);
+            cantamAdi = itemView.findViewById(R.id.textViewCantamAdi);
             //urunUrl = itemView.findViewById(R.id.imageViewUrunFoto);
             int position = this.getAdapterPosition();
         }
     }
 }
+
